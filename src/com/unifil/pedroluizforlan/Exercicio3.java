@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Exercicio3 {
+    public static boolean par(Integer numero){
+        return numero % 2 == 0;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> valores = new ArrayList<>();
@@ -18,7 +22,7 @@ public class Exercicio3 {
             System.out.println("Insira um valor inteiro no vetor: ");
             valores.add(sc.nextInt());
 
-            if (valores.get(i) % 2 == 0) {
+            if (par(valores.get(i))) {
                 valoresPares.add(valores.get(i));
             } else {
                 qtdImpares++;
